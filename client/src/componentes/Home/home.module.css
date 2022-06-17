@@ -1,0 +1,193 @@
+.cartoneta {
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+.sidebar{
+  background-image: url(https://tse4.mm.bing.net/th?id=OIP.kYzu9-X3QtQa7rHjF4BXGQHaDt&pid=Api&P=0&w=342&h=171);
+  width: 16rem;
+  height: calc(135vh - 52px);
+  border: 1px solid gray;
+}
+
+.ul{
+  list-style: none;
+  padding: 1rem 2rem;
+}
+
+.li{
+  margin-bottom: 1rem;
+  background-color: white;
+}
+
+.flex{
+  display: flex;
+}
+
+.nav{
+  height: 80px;
+  display: flex;
+  border: 1px solid gray;
+  background-image: url(https://tse4.mm.bing.net/th?id=OIP.kYzu9-X3QtQa7rHjF4BXGQHaDt&pid=Api&P=0&w=342&h=171);
+}
+
+.titulo{
+  width: 450px;
+  text-align: center;
+  background-color: white;
+  font-family: cursive;
+}
+
+.search{
+  margin-top: 20px;
+  margin-left: 180px;
+}
+
+.boton{
+  --glow-color: rgb(190, 255, 176);  
+  --enhanced-glow-color: rgb(206, 255, 206);
+  --btn-color: rgb(61, 136, 72);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  height: 80px;
+  text-align: center;
+  margin-left: 200px;
+}
+.boton::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.boton:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.boton:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+.logo{
+  width: 220px;
+}
+
+.caja {
+  margin:20px auto 40px auto;	
+  border:1px solid #d9d9d9;
+  height:30px;
+  overflow: hidden;
+  width: 180px;
+  position:relative;
+  text-align: center;
+  background-color: white;
+}
+select {
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  height: 30px;
+  padding: 5px;
+  width: 250px;
+  font-family: italic;
+}
+select:focus{ outline: none;}
+
+.caja::after{
+ content:"\025be";
+ display:table-cell;
+ padding-top:7px;
+ text-align:center;
+ width:30px;
+ height:30px;
+ background-color:#d9d9d9;
+ position:absolute;
+ top:0;
+ right:0px;	
+ pointer-events: fill;
+}
+
+.imgLoader{
+  border-radius: 45px;
+  margin-left: 30%;
+  margin-top:10%;
+}
+
+.boton1{
+  --glow-color: rgb(190, 255, 176);  
+  --enhanced-glow-color: rgb(206, 255, 206);
+  --btn-color: rgb(61, 136, 72);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  text-shadow: 0 0 0.5em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  height: 80px;
+  text-align: center;
+  margin-left: 10px;
+}
+.boton1::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.boton1:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.boton1:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
