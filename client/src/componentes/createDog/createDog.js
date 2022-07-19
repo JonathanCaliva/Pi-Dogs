@@ -3,6 +3,7 @@ import { useState, useEffect} from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import {postDog , getTemperament} from '../../action'
 import { useDispatch, useSelector } from 'react-redux';
+import Swal from "sweetalert2";
 import style from './createDog.module.css'
 
 
@@ -69,7 +70,7 @@ export default function DogCreate(){
     life_span_min:"",
     life_span_max:"",
     createDb:true,
-    image:"" || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_ve2rhcDRIDr6VZfWJAquDsj3nYZNdgyMA&usqp=CAU",
+    image:"" || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9ctx1U4GY_wLmlIacTLHyaj24LG318Kx41w&usqp=CAU",
     temperament: [],
     })
 
@@ -110,7 +111,7 @@ export default function DogCreate(){
         errors.hasOwnProperty("life_span_min") ||
         errors.hasOwnProperty("life_span_max") ||
         errors.hasOwnProperty("image")){
-            alert("Complete correctamente todos los campos")
+          Swal.fire("", "fill in all the fields correctly", "error")
             setInput({
                 name: "",
                 height_min: "",
@@ -120,11 +121,17 @@ export default function DogCreate(){
                 life_span_min:"",
                 life_span_max:"",
                 createDb:true,
-                image:"" || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_ve2rhcDRIDr6VZfWJAquDsj3nYZNdgyMA&usqp=CAU",
+                image:"" || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9ctx1U4GY_wLmlIacTLHyaj24LG318Kx41w&usqp=CAU",
                 temperament: [],
             })
         }else{
-        alert("CONGRATULATIONS, THE DOG WAS CREATED SECCESSFULLY !");
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Congratulations, successful creation",
+            showConfirmButton: false,
+            timer: 1500,
+          });
         setInput({
             name: "",
             height_min: "",
@@ -134,7 +141,7 @@ export default function DogCreate(){
             life_span_min:"",
             life_span_max:"",
             createDb:true,
-            image:"" || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ2_ve2rhcDRIDr6VZfWJAquDsj3nYZNdgyMA&usqp=CAU",
+            image:"" || "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9ctx1U4GY_wLmlIacTLHyaj24LG318Kx41w&usqp=CAU",
             temperament: [],
         });
         console.log("input", input);
@@ -304,7 +311,7 @@ return(
                           ))}
                       </select>
                       <h5 className={style.temper}>SELECTED TEMPERAMENT: {input.temperament.map(el=>el + " ,")}</h5>                   
-                       <button  type="submit" disabled={!botonActivo}>
+                       <button  type="submit" disabled={!botonActivo} className={style.created}>
                         CREATE THE DOG
                       </button> 
                       
@@ -330,6 +337,7 @@ return(
             </div>
             </div> :(
                 <div>
+                     <h5 className={style.textLoader}>Loading...</h5>
                      <img className={style.imgLoader}  src='https://c.tenor.com/A17aJ1ZniiUAAAAC/dog-walking.gif' alt='loader'/> 
                 </div> )}
             </div>

@@ -17,5 +17,4 @@ export default function Card({name,image,temperament,weigth_min,weight_max}){
           </div>
         </div>
       );
-
 }

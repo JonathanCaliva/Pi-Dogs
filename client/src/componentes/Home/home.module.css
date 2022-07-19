@@ -10,8 +10,9 @@
 .sidebar{
   background-image: url(https://tse4.mm.bing.net/th?id=OIP.kYzu9-X3QtQa7rHjF4BXGQHaDt&pid=Api&P=0&w=342&h=171);
   width: 16rem;
-  height: calc(135vh - 52px);
+  height: calc(127vh - 48px);
   border: 1px solid gray;
+  margin-top: 8px;
 }
 
 .ul{
@@ -62,12 +63,12 @@
   box-shadow: 0 0 1em 0.25em var(--glow-color),
     0 0 4em 1em var(--glow-spread-color),
     inset 0 0 0.75em 0.25em var(--glow-color);
-  text-shadow: 0 0 0.5em var(--glow-color);
   position: relative;
   transition: all 0.3s;
   height: 80px;
   text-align: center;
   margin-left: 200px;
+  cursor: pointer;
 }
 .boton::after {
   pointer-events: none;
@@ -139,13 +140,12 @@ select:focus{ outline: none;}
 .imgLoader{
   border-radius: 45px;
   margin-left: 30%;
-  margin-top:10%;
 }
 
 .boton1{
-  --glow-color: rgb(190, 255, 176);  
+  --glow-color: rgb(57, 219, 206);  
   --enhanced-glow-color: rgb(206, 255, 206);
-  --btn-color: rgb(61, 136, 72);
+  --btn-color: rgb(15, 13, 109);
   border: 0.25em solid var(--glow-color);
   padding: 1em 3em;
   color: var(--glow-color);
@@ -157,12 +157,12 @@ select:focus{ outline: none;}
   box-shadow: 0 0 1em 0.25em var(--glow-color),
     0 0 4em 1em var(--glow-spread-color),
     inset 0 0 0.75em 0.25em var(--glow-color);
-  text-shadow: 0 0 0.5em var(--glow-color);
   position: relative;
   transition: all 0.3s;
   height: 80px;
   text-align: center;
   margin-left: 10px;
+  cursor: pointer;
 }
 .boton1::after {
   pointer-events: none;
@@ -190,4 +190,64 @@ select:focus{ outline: none;}
   box-shadow: 0 0 0.6em 0.25em var(--glow-color),
     0 0 2.5em 2em var(--glow-spread-color),
     inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+.botonF{
+  --glow-color: rgb(17, 17, 16);  
+  --enhanced-glow-color: rgb(206, 255, 206);
+  --btn-color: rgb(252, 220, 41);
+  border: 0.25em solid var(--glow-color);
+  padding: 1em 3em;
+  color: var(--glow-color);
+  font-size: 15px;
+  font-weight: bold;
+  background-color: var(--btn-color);
+  border-radius: 1em;
+  outline: none;
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 1em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+  position: relative;
+  transition: all 0.3s;
+  height: 80px;
+  text-align: center;
+  margin-left: 200px;
+  cursor: pointer;
+}
+.botonF::after {
+  pointer-events: none;
+  content: "";
+  position: absolute;
+  top: 120%;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--glow-spread-color);
+  filter: blur(2em);
+  opacity: 0.7;
+  transform: perspective(1.5em) rotateX(35deg) scale(1, 0.6);
+}
+
+.botonF:hover {
+  color: var(--btn-color);
+  background-color: var(--glow-color);
+  box-shadow: 0 0 1em 0.25em var(--glow-color),
+    0 0 4em 2em var(--glow-spread-color),
+    inset 0 0 0.75em 0.25em var(--glow-color);
+}
+
+.botonF:active {
+  box-shadow: 0 0 0.6em 0.25em var(--glow-color),
+    0 0 2.5em 2em var(--glow-spread-color),
+    inset 0 0 0.5em 0.25em var(--glow-color);
+}
+
+.card1{
+  text-decoration: none;
+}
+
+.textLoader{
+  text-align: center;
+  font-family: cursive;
+  font-size: 50px;
 }

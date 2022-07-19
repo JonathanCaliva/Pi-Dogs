@@ -126,11 +126,20 @@
   .imgLoader{
     border-radius: 45px;
     margin-left: 30%;
-    margin-top:10%;
   }
 
   .input{
       border-radius: 10px;
+  }
+  .created{
+    border-radius: 15px;
+    background-color:gray ;
+    color: white;
+    cursor: pointer;
+  }
+  .created:hover{
+    background-color: blue;
+    color: white;
   }
 
   .inputTrue{
@@ -143,4 +152,10 @@
       background-color: white;
       width: 450px;
       border-radius: 9px;
+  }
+
+  .textLoader{
+    text-align: center;
+    font-family: cursive;
+    font-size: 50px;
   }

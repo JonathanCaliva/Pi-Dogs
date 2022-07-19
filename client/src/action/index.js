@@ -71,18 +71,43 @@ export function getTemperament(){
     }
 }
 
-export function getDetail(id){
-    return async function(dispatch){
-        try {
-            var json = await axios.get("http://localhost:3001/dogs/"+ id)
-            return dispatch({
-                type: 'GET_DETAILS',
-                payload : json.data
-            })
-        } catch (error) {
-            console.log(error)
-        }
+// export function getDetail(id){
+//     return async function(dispatch){
+//         try {
+//             var json = await axios.get("http://localhost:3001/dogs/"+ id)
+//             return dispatch({
+//                 type: 'GET_DETAILS',
+//                 payload : json.data
+//             })
+//         } catch (error) {
+//             console.log(error)
+//         }
+//     }
+// }
+
+export const getDetail = (id) =>{
+    return (dispatch) => {
+                return fetch("http://localhost:3001/dogs/"+ id)
+                .then((response) => response.json())
+                .then((data) => {
+                console.log(data)  
+                  dispatch({
+                    type: 'GET_DETAILS',
+                    payload : data
+                  })
+                })
+              } 
     }
+
+export const addFavorite = (info)=> {
+    return { 
+      type: "ADD_FAVORITE",
+       payload : info
+    };
 }
-
-
+export const removeFavorite = (id)=>{
+    return{
+      type: "REMOVE_FAVORITE",
+      payload: id
+    }
+  }

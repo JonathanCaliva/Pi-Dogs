@@ -2,7 +2,8 @@ const initialState = {
     dogs:[],
     allDogs:[],
     temperament:[],
-    detail:[]
+    detail:[],
+    favorite:[]
 }
 
 export default function rootReducer(state=initialState,action){
@@ -82,6 +83,18 @@ export default function rootReducer(state=initialState,action){
                 ...state,
                 dogs:filter
             }
+            case "ADD_FAVORITE":
+                let dogSelec = state.favorite.find((dog) => dog.id ===action.payload.id)
+                if(dogSelec) return state
+                else return{
+                     ...state,
+                     favorite: [...state.favorite, action.payload]
+                 }
+                case "REMOVE_FAVORITE":
+                    return{
+                        ...state,
+                        favorite: state.favorite.filter((dog)=> dog.id !== action.payload) 
+                    }
             default:
             return state
     }
