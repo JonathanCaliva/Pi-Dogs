@@ -5,6 +5,8 @@ const dogs= require('./dogs')
 const dogPost=require('./dogPost')
 const temper=require('./temper')
 
+
+
 const router = Router();
 
 // Configurar los routers
@@ -12,5 +14,6 @@ const router = Router();
 router.use('/dogs',dogs)
 router.use('/dogPost',dogPost)
 router.use('/temper',temper)
+
 
 module.exports = router;
