@@ -2,7 +2,7 @@ import axios from 'axios'
 
 export function getDogs(){
     return async function(dispatch){
-        let json = await axios.get("http://localhost:3001/dogs");
+        let json = await axios.get("https://dogs-backend-pi.herokuapp.com/dogs");
         return dispatch({
             type: 'GET_DOGS',
             payload : json.data,
@@ -13,7 +13,7 @@ export function getDogs(){
 export function getNameDog(name){
     return async function(dispatch){
         try {
-            var json = await axios.get("http://localhost:3001/dogs?name=" + name);
+            var json = await axios.get("https://dogs-backend-pi.herokuapp.com/dogs?name=" + name);
             return dispatch({
                 type:"GET_NAME_DOG",
                 payload: json.data
@@ -54,7 +54,7 @@ export function filterByCreated(payload){
 
 export function postDog(payload){
     return async function (dispatch) {
-        let json = await axios.post("http://localhost:3001/dogPost", payload);
+        let json = await axios.post("https://dogs-backend-pi.herokuapp.com/dogPost", payload);
         return dispatch( {
             type: "POST_DOG",
             payload: json
@@ -63,7 +63,7 @@ export function postDog(payload){
 }
 export function getTemperament(){
     return async function(dispatch){
-        let json= await axios.get("http://localhost:3001/temper")
+        let json= await axios.get("https://dogs-backend-pi.herokuapp.com/temper")
         return dispatch({
             type: "GET_TEMPERAMENT",
             payload: json.data
@@ -87,7 +87,7 @@ export function getTemperament(){
 
 export const getDetail = (id) =>{
     return (dispatch) => {
-                return fetch("http://localhost:3001/dogs/"+ id)
+                return fetch("https://dogs-backend-pi.herokuapp.com/dogs/"+ id)
                 .then((response) => response.json())
                 .then((data) => {
                 console.log(data)  
